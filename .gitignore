@@ -1,0 +1,8 @@
+"sendgrid.env" 
+"export SENDGRID_API_KEY='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'"  echo "sendgrid.env"  source ./sendgrid.env
+"export SENDGRID_API_KEY='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'"  echo "sendgrid.env"  source ./sendgrid.env
+
+/node_modules
+npm-debug.log
+.DS_Store
+/.env

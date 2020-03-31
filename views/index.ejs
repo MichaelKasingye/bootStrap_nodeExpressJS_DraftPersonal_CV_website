@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>Michael_Kasingye</title>
+<!-- Required meta tags -->
+<%include partials/metags.ejs%>
+</head>
+<body>
+<div class="blocks-page">
+    <!--navigation-->
+<%include partials/navigation.ejs%>
+<!-- hero -->
+<%include partials/hero.ejs%>
+<!-- projects -->
+<%include partials/projects.ejs%>
+<!-- services -->
+<%include partials/services.ejs%>
+  <!-- contact -->
+  <%include partials/contact.ejs%>
+<!-- footer -->
+<%include partials/footer.ejs%>
+  </div>
+<!-- scripts -->
+<%include partials/scripts.ejs%>
+
+<script>
+  $('#form').on('submit',(e)=>{
+  e.preventDefault();
+  const name = $('#contact-form-name').val();   
+  const email = $('#contact-form-email').val(); 
+  const message = $('#contact-form-message').val();
+  
+  const data = {
+    name,
+    email,
+    message
+  };
+  $.post('/email_display',data,function(){
+      console.log(`Server receive this data`);
+  });
+  
+  });
+  </script>
+</body>
+</html>
